@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../img/trancepercent.png);
+}
+
+li {
+    list-style: none;
+}
+
+a img {
+    border: none;
+    vertical-align: middle;
+}
+
+html {
+    background: #F4EEE3;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.2;
+    font-family: "Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #8C6239;
+}
+
+a:hover {
+    color: #994C00;
+}
+
+hr {
+    border: none;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #959595;
+    clear: both;
+}
+
+main, header, footer, section, article, figure ,figcaption {
+    display: block;
+}
+
+body > header:after,
+body > header + div:after,
+section:after,
+article:after,
+ul:after,
+dl:after,
+div.img:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+
+/* ヘッダー */
+body > header {
+    position: relative;
+}
+
+body.touchDevice > header {
+    padding-top: 37px;
+    background-color: #0C7E84;
+}
+
+body > header button {
+    width: 50%;
+    height: 37px;
+    position: absolute;
+    background: #000;
+    border: none;
+    border-left: 1px solid #555;
+    color: #FFF;
+    top: 0;
+    font-size: 12px;
+}
+
+#swViewDevice {
+    position: absolute;
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 37px;
+    display: none;
+}
+
+body.touchDevice #swViewDevice {
+    display: block;
+}
+
+body > header button#swPC {
+    left: 0;
+}
+
+body > header button#swSP {
+    right: 0;
+}
+
+body > header h1 {
+    font-size: 36px;
+    padding: 1% 3%;
+    position: relative;
+    background: #0C7E84;
+    z-index: 1;
+}
+
+body > header h1 img {
+    width: auto;
+}
+
+body > header h1 a,
+body > header h1 a:hover {
+    position: relative;
+    z-index: 10;
+    color: #FFF;
+    text-decoration: none;
+}
+
+body > header button,
+body > header nav h2 {
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 3px;
+    right: 1%;
+    z-index: 10;
+}
+
+.touchDevice nav {
+    top: 40px;
+}
+
+nav.index {
+    position: static;
+    margin-bottom: 25px;
+}
+nav h2 {/* jQueryで自動挿入される[≡]ボタン */
+    width: 57px;
+    height: 47px;
+    background: #219DBF url(../img/icon-menu.png) center center no-repeat;
+    border-radius: 3px;
+    float: right;
+}
+
+nav > ul {
+    clear: both;
+    font-size: 16px;
+    border: 1px solid #FFF;
+    border-top: none;
+}
+
+nav > ul li {
+    color: #FFF;
+    text-align: center;
+    position: relative;
+    background: #219DBF;
+}
+
+nav > ul > li a,
+nav > ul > li span {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF;
+    border-top: 1px solid #FFF;
+}
+
+nav li a:hover {
+    color: #FFF;
+}
+
+nav a:hover,
+nav span:hover {
+    background: rgba(0, 0, 0, .3);
+}
+
+nav li ul {
+    font-size: 14px;
+}
+
+nav li ul li a {
+    font-size: 12px;
+}
+
+nav li ul li a:before {
+    content: "> ";
+}
+
+/* フッター */
+footer {
+    clear: both;
+    text-align: center;
+}
+
+footer small {
+    border-top: 1px solid #999;
+    display: block;
+    margin-top: 10px;
+    padding: 15px 0;
+    font-size: 12px;
+    width: 100%;
+    color: #333;
+    font-family: sans-serif;
+}
+
+/* このページの上へ戻る */
+a[href="#top"] {
+    margin: 3em auto 1em;
+    display: block;
+    width: 10em;
+    text-align: center;
+}
+
+/* ベースレイアウト系 */
+section > div,
+section article > div {
+    padding: 0 3%;
+}
+
+section {
+    margin-top:  1.5em;
+    margin-bottom: 3em;
+}
+
+section + section {
+    margin-top:  0;
+    margin-bottom: 3em;
+}
+
+article {
+    margin-bottom:3em;
+}
+
+/* 大見出し */
+section h1 {
+    margin-bottom:15px;
+    padding: 0 10px 10px;
+    font-size: 16px;
+    color: #42210B;
+    border-bottom: 5px solid #D3D318;
+}
+
+section img + h1 {
+    margin-top: 25px;
+}
+
+/* 中見出し */
+section h2 {
+    font-size: 20px;
+    margin: 1.5em 0 ;
+    padding: 5px 10px; 
+    color: #FFF;
+    background: #736357;
+}
+
+section[class^="col"] h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding: 0;
+    background: none;
+    color: #0071BC;
+}
+
+/* 画像 */
+img {
+    width: 100%;
+}
+
+article p + strong {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+}
+
+section.col2-2-4 article {
+    width:48%;
+    margin-right: 4%;
+    float: left;
+    clear: both;
+}
+
+section.col2-2-4 article.end {
+    margin-right: 0;
+    clear: none;
+}
+
+section.col2-2-4 h2,
+section.col1-2-3 h2,
+section.col1-2-4 h2 {
+    font-size: 16px;
+}
+
+section.col2-2-4 p,
+section.col1-2-3 p,
+section.col1-2-4 p {
+    margin-top: 0;
+}
+
+section.col2-2-4 h2 + p,
+section.col1-2-3 h2 + p,
+section.col1-2-4 h2 + p {
+    margin-top: -5px;
+}
+
+section.col1 p,
+section.col1-2-3 article p,
+section.col1-2-4 p {
+    font-size: 14px;
+}
+
+section.col1-2-3 div {
+    margin-bottom: 2em;
+}
+
+/* 平文 */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+section div {
+    margin-top: 1.5em;
+}
+
+section h1 + div {
+    margin-top: 0;
+}
+
+/* 普通のリスト */
+main ul {
+    margin: 1em 0 0 1em;
+}
+
+main ul li {
+    margin: 0 0 6px 0;
+}
+
+main ul li:before {
+    content: "・";
+    margin-left: -1em;
+}
+
+/* 価格リスト */
+main dl {
+    margin: 0 3% .5em;
+}
+
+main dt {
+    margin: 0 0 0 1em;
+    float: left;
+}
+
+main dt:before {
+    content: "・";
+    margin-left: -1em;
+}
+
+main dd {
+    float: right;
+}
+
+main div.img {
+    padding: 0;
+}
+main div.img dt:first-child {
+    margin: 2em -3% 6px;
+    float: none;
+}
+
+main div.img dt:first-child:before {
+    content: "";
+    margin-left: 0;
+}
+
+main div.img img {
+    margin-bottom: 0;
+}
+
+main dl + h2,
+main .img + h2  {
+    margin-top: 3em;
+}
+
+/* テーブル */
+table {
+    border: 1px #998675 solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 2em 3% 10px;
+}
+
+table caption {
+    text-align:left;
+    font-size: 16px;
+}
+
+td, th {
+    border: 1px #998675 solid;
+    padding: 20px 5px 10px;
+}
+
+th {
+    text-align:left;
+    white-space: nowrap;
+    width: 1%;
+    font-weight:normal;
+    background-color: #736357;
+    color: #FFF;
+}
+
+/* Googleマップ */
+[class*="map"]{
+    margin-bottom: 10px;
+}
+
+.google-map {
+    position: relative;
+    padding-bottom: 75%; /* 縦横比 */
+    height: 0;
+    overflow: hidden;
+}
+
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+[class*="map"] + img,
+[class*="map"] + img +img {
+    margin-bottom: 10px;
+}
+
+/* スライダー */
+html:not([class="ie8"]) .theme-tmp .nivo-directionNav a {
+    background-size: 200% 100%;
+    height: 40%;
+    top: 30%;
+    width: 7%;
+}

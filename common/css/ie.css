@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+@import url("base.css");
+@import url("tablet.css");
+@import url("pc.css");
+
+/* 追記 */
+section.col2-2-4 article.newLine {
+    clear: both;
+    margin-left: 2.5%;
+}
+
+section.col1-2-3 article.newLine {
+    clear: both;
+}
+
+
+

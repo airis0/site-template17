@@ -1,0 +1,98 @@
+/*
+Skin Name: Nivo Slider tmp Theme
+Skin URI: 
+Description: The tmp skin for the Nivo Slider.
+Version: 1.0
+Author: tomoko sato
+Author URI: http://www.rasen-d.net
+Supports Thumbs: true
+*/
+
+.theme-tmp {
+	position:relative;
+}
+.theme-tmp .nivoSlider {
+	position:relative;
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+}
+.theme-tmp .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-tmp .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-tmp .nivo-controlNav {
+	text-align: right;
+	padding: 0;
+	position: absolute;
+	bottom: 30px;
+	right: 15px;
+	z-index: 1000;
+}
+.theme-tmp .nivo-controlNav a {
+	display:inline-block;
+	width:12px;
+	height:12px;
+	background:url(bullets.png) no-repeat;
+	text-indent:9999px;
+	overflow: hidden;
+	border:0;
+	margin: 0 2px;
+}
+.theme-tmp .nivo-controlNav a.active {
+	background-position:0 bottom;
+}
+
+.theme-tmp .nivo-directionNav a {
+	display:block;
+	width:45px;
+	height:153px;
+	background:url(arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	opacity: 0;
+	top: 40%;
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.theme-tmp:hover .nivo-directionNav a { opacity: 1; }
+.theme-tmp a.nivo-nextNav {
+	background-position:right 0;
+	right:15px;
+}
+.theme-tmp a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-tmp .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-tmp .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-tmp .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-tmp .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-tmp .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-tmp .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}
