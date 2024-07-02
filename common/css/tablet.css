@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* タブレット：ヘッダー */
+body > header h1 {
+    padding: 0 3%;
+    height: 100px;
+    line-height: 100px;
+}
+
+body > header h2 {
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* タブレット：ヘッダー：メニュー */
+body.touchDevice > header {
+    padding-top: 0; 
+}
+
+body.touchDevice #swViewDevice {
+    display: none;
+}
+
+nav {
+    border: none;
+    background: #219DBF;
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 100%;
+    position: static;
+}
+
+nav > ul{
+    background: none;
+    padding: 0;
+    float: left;
+    border: none;
+    border-right: 1px solid #90CEDF;
+    position: relative;
+    z-index: 9999;
+}
+
+nav:after,
+nav > ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav > ul > li {
+    text-align: left;
+    float: left;
+    position: relative;
+}
+
+nav > ul > li > a,
+nav > ul > li > span{
+    display: block;
+    border-right: 1px solid #0F4E5F;
+    border-left: 1px solid #90CEDF;
+    border-top: none; 
+}
+
+nav > ul > li a {
+    padding: 10px 20px;
+}
+
+nav > ul > li > a.parent{
+    margin-right:37px; 
+    border-right: none;
+}
+
+nav > ul > li > a.parent + span {
+    width: 37px;
+    border-left: 1px solid #19768F;
+}
+
+nav > ul > li > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav li ul {
+    width: 200px;
+    border: none;
+    padding: 0;
+    position: absolute;
+    border: 1px solid #FFF;
+}
+
+nav li ul li,
+nav li ul li a {
+    display: block;
+    padding: 0;
+    font-size: 14px;
+    background: transparent;
+}
+
+nav li ul li a {
+    padding: 10px;
+    border-top: none;
+    border-bottom: 1px solid #FFF;
+    text-align: left;
+    background: #219DBF;
+    opacity: .9;
+}
+
+nav li ul li a:hover {
+    background : #64AA00;
+}
+
+/* タブレット：ベース */
+article {
+    margin-bottom:30px;
+}
+
+/* タブレット：大見出し */
+section h1 {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 3%;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+/* タブレット：中見出し */
+section h2 {
+    margin: 1.5em 3%;
+}
+
+/* タブレット：平文 */
+br.br-no-br {
+    display: none;
+}
+
+/* タブレット：画像 */
+section.col1-3-3 img {
+    width:32%;
+    margin-right: 2%;
+    margin-bottom: 10px;
+    float: left;
+    display: block;
+}
+
+section.col1-3-3 img.end {
+    margin-right: 0;
+}
+
+section.col1-3-3 div {
+    clear: both;
+}
+
+section.col1-2-3 article,
+section.col1-2-4 article {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 10px;
+    float: left;
+    display: block;
+}
+
+section.col1-2-3 article.end,
+section.col1-2-4 article.end {
+    margin-right: 0;
+}
+
+section.col1-2-3 article.end + article,
+section.col1-2-4 article.end + article {
+    clear: both;
+}
+
+section.col1 p {
+    font-size: 16px;
+}
+
+section img + div {
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
+
+/* タブレット：価格リスト */
+main section > dl,
+main div.img dl {
+    margin: 0 3% .5em;
+    width: 44%;
+    float: left;
+}
+
+main div.img {
+    clear: both;
+}
+
+main div.img dl {
+    margin: 0 3% .5em;
+    clear: both;
+}
+
+main div.img dl.end {
+    clear: none;
+}
+
+main div.img dt:first-child {
+    margin: 1em -3% 6px -8%;
+}
+
+main div.img dl.end dt:first-child {
+    margin: 1em -8% 6px -3%;
+}
+
+/* タブレット：Googleマップ */
+[class*="map"] + img,
+[class*="map"] + img +img {
+    width: 48%;
+    display: block;
+    float: left;
+    margin-bottom: 2em;
+}
+
+[class*="map"] + img {
+    margin-right: 4%;
+}
+
+/* タブレット：テーブル */
+table {
+    clear: both;
+    margin: 0 3%;
+}
+
+table + div {
+    clear: both;
+    margin: 1em 0;
+}
+
+/* スライダー */
+html:not([class="ie8"]) .theme-tmp .nivo-directionNav a {
+    width: 5%;
+}

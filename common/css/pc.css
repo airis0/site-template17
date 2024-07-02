@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* PC */
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body.touchDevice #swViewDevice {
+    display: block;
+}
+
+/* ヘッダー */
+body.touchDevice > header {
+    padding-top: 50px;
+}
+
+/* このページの上へ戻る */
+a[href="#top"] {
+    margin: 5em auto 1em;
+}
+
+/* PC：平文 */
+br.br-no-br {
+    display: inline;
+}
+
+/* PC：画像 */
+section.col1 img {
+    width:75%;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    float: right;
+    display: block;
+}
+
+section.col1 h1,
+section.col1 div {
+    width: 23%;
+}
+
+section.col2-2-4 article,
+section.col1-2-4 article {
+    width:23%;
+    margin-right: 0;
+    margin-left: 2.5%;
+    margin-bottom: 0;
+    clear: none;
+}
+
+section.col2-2-4 article + article,
+section.col1-2-4 article + article {
+    margin-left: 1%;
+}
+
+section.col2-2-4 article.end + article,
+section.col1-2-4 article.end + article {
+    clear: both;
+    margin-left: 2.5%;
+}
+
+section.col1-2-3 article {
+    width: 30%;
+    margin: 0 -1% 10px 3%;
+}
+
+/* PC：価格リスト */
+main div.img dt:first-child,
+main div.img dl.end dt:first-child {
+    margin: 1em -3% 6px;
+}
+
+/* PC：Googleマップ */
+.access-img {
+    width: 51%;
+    float: left;
+    margin: 0 0 10px 3%;
+    padding: 0;
+}
+
+.google-map,
+[class*="map"] {
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.google-map {
+    padding-bottom: 65%; /* 縦横比 */
+}
+
+[class*="map"] + img,
+[class*="map"] + img +img {
+    width: 49%;
+    display: block;
+    float: left;
+}
+
+[class*="map"] + img {
+    margin: 0 2% 0 0;
+    clear: both;
+}
+
+/* PC：テーブル */
+table {
+    width: 40%;
+    margin-bottom: 1em;
+    float: left;
+    clear: none;
+}

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+@import url("base.css");
+
+/* タブレット */
+@import url("tablet.css") all and (min-width: 768px);
+
+/* PC */
+@import url("pc.css") all and (min-width: 1000px);
+
